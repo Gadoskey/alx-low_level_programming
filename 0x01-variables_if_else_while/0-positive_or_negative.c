@@ -1,20 +1,25 @@
 #include <stdio.h>
-int main(void)
-/*
+#include <stdlib.h>
+#include <time.h>
+/**
  * main - The starting point of the program
- * Return: The value of n
+ * Return: 0 Always
  */
+int main(void)
 {
-	int n
+	int n;
+
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
 	if (n > 0)
 	{
 		printf("is positive\n");
 	}
-	if (n == 0)
+	else if (n == 0)
 	{
 		printf("is zero\n");
 	}
-	if (n < 0)
+	else
 	{
 		printf("is negative\n");
 	}
