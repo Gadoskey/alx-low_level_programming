@@ -5,7 +5,7 @@
  *print_to_98 - A propgram that prints to 98
  *@n:The integer
  *Return: 0
- */
+ */ 
 void print_to_98(int n)
 {
 	if (n <= 98)
@@ -36,7 +36,7 @@ void print_to_98(int n)
 			}
 			else
 			{
-				printf("%d", n);
+				printf("%d ", n);
 			}
 		}
 	}
