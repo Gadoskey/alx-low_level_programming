@@ -1,13 +1,20 @@
 #include "main.h"
+
 /**
- * main - A program that prints _putchar, followed by a new line.
- * Return: 0 upon success
+ * main - A propgram that prints putchar
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
 int main(void)
 {
-	{
-		write("_putchar\n");
-	}
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
+	_putchar('\n');
 	return (0);
 }
-
