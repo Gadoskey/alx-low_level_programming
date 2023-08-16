@@ -1,4 +1,3 @@
-#include "main.h"
 #include <stdio.h>
 
 /**
@@ -8,23 +7,25 @@
 int main(void)
 {
 	int i;
-	long int fibo[50];
+	long int fibonacci[50];
 
-	fibo[0] = 1;
-	fibo[1] = 2;
-	printf("%ld, %ld, ", fibo[0], fibo[1]);
+	fibonacci[0] = 1;
+	fibonacci[1] = 2;
+	printf("%ld, %ld, ", fibonacci[0], fibonacci[1]);
 
 	for (i = 2; i < 50; i++)
 	{
-		fibo[i] = fibo[i - 1] + fibo[i - 2];
-	}
-	if (i < 49)
-	{
-		printf("%ld\n", fibo[i]);
-	}
-	else
-	{
-		printf("%ld, ", fibo[i]);
+	
+		fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+
+		if (i == 49)
+		{
+			printf("%ld\n", fibonacci[i]);
+		}
+		else
+		{
+			printf("%ld, ", fibonacci[i]);
+		}
 	}
 	return (0);
 }
