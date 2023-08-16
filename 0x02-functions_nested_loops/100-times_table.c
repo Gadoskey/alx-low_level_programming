@@ -33,5 +33,6 @@ void print_times_table(int n)
 				}
 				_putchar((re % 10) + '0');
 			}
+			_putchar('\n');
 		}
 }
