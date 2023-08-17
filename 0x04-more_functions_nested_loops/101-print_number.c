@@ -1,4 +1,5 @@
 #include "main.h"
+#include <unistd.h>
 /**
  * print_number - check the code
  * @n: The integer to be printed.
@@ -11,7 +12,7 @@ void print_number(int n)
 	if (n < 0)
 	{
 		nl = -n;
-		putchar('-');
+		_putchar('-');
 	}
 	else
 	{
@@ -21,5 +22,5 @@ void print_number(int n)
 	{
 		print_number(nl / 10);
 	}
-	putchar((nl % 10) + '0');
+	_putchar((nl % 10) + '0');
 }
