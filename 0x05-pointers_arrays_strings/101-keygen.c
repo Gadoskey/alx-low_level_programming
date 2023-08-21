@@ -2,17 +2,50 @@
 #include <stdlib.h>
 #include <time.h>
 
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+
 int main(void)
 {
-	int i;
-	char password[13];
+	int i = 0, sum = 0, half1, half2;
+	char password[84];
 
 	srand(time(0));
-	for (i = 0; i < 12; i++)
+
+	while (sum < 2772)
 	{
-		password[i] = rand() % 94 + 33;
+		password[i] = 33 + rand() % 94;
+		sum += password[i++];
 	}
-	 password[12] = '\0';
-	 printf("%s\n", password);
+
+	 password[i] = '\0';
+	 if (sum != 2772)
+	 {
+		 half1 = (sum - 2772) / 2;
+		 half2 = (sum - 2772) / 2;
+
+		 if ((sum - 2772) % 2 != 0)
+			 half1++;
+		 for (i = 0; password[i]; i++)
+		 {
+			 if (password[i] >= (33 + half1))
+			 {
+				 password[i] -= half1;
+				 break;
+			 }
+		 }
+		 for (i = 0; password[i]; i++)
+		 {
+			 if (password[i] >= (33 + half2))
+			 {
+				 password[i] -= half2;
+				 break;
+			 }
+		 }
+	 }
+	 printf("%s", password);
 	 return (0);
 }
