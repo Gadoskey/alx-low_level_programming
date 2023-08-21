@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * main - check the code
- *
+ * _atoi - check the code
+ * @s: The pointer
  * Return: Always 0.
  */
 int _atoi(char *s)
