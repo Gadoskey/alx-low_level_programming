@@ -5,9 +5,9 @@
 int main(void)
 {
 	int i;
+	char password[13];
 
 	srand(time(0));
-	char password[13];
 	for (i = 0; i < 12; i++)
 	{
 		password[i] = rand() % 94 + 33;
