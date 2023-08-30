@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * _sqrt_recursion_helper - prints a square
  * @n: pointer
@@ -17,7 +18,7 @@ int _sqrt_recursion_helper(int n, int start, int end)
 		return (-1);
 	}
 
-	mid = (start + end) / 2;
+	mid = start + (end - start) / 2;
 	mid_squared = mid * mid;
 
 	if (mid_squared == n)
