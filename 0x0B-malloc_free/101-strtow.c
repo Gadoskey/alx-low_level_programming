@@ -50,7 +50,7 @@ char **strtow(char *str)
 	int w, l, words, letters = 0, index = 0;
 	char **strings;
 
-	if (str == NULL || *str == '\0')
+	if (str == NULL || str[0] == '\0')
 	{
 		return (NULL);
 	}
@@ -64,7 +64,7 @@ char **strtow(char *str)
 	{
 		return (NULL);
 	}
-	for (w = 0; str[w]; w++)
+	for (w = 0; w < words; w++)
 	{
 		while (str[index] == ' ')
 		{
@@ -76,14 +76,14 @@ char **strtow(char *str)
 		{
 			for (; w >= 0; w--)
 				free(strings[w]);
+			free(strings);
+			return (NULL);
 		}
-		free(strings);
-		return (NULL);
-	}
-	for (l = 0; l < letters; l++)
-	{
-		strings[w][l] = str[index++];
-		strings[w][l] = '\0';
+		for (l = 0; l < letters; l++)
+		{
+			strings[w][l] = str[index++];
+			strings[w][l] = '\0';
+		}
 	}
 	strings[w] = NULL;
 	return (strings);
