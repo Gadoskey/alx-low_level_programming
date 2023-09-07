@@ -1,4 +1,5 @@
 #include "main.h"
+#define ERR_MSG "Error"
 /**
  * is_digit - check if argument is digit
  * @c: character
@@ -41,7 +42,7 @@ int main(int argc, char *argv[])
 	if (argc != 3)
 	{
 		printf("Error\n");
-		return (98);
+		exit(98);
 	}
 	num1 = string_to_int(argv[1]);
 	num2 = string_to_int(argv[2]);
