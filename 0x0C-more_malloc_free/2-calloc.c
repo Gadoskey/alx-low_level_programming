@@ -20,5 +20,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
+	memset(array, 0, total);
 	return (array);
 }
