@@ -42,7 +42,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	for (j = 0; j < n; j++, i++)
 	{
-		newstring[i] = s2[i];
+		newstring[i] = s2[j];
 	}
 	newstring[i] = '\0';
 	return (newstring);
