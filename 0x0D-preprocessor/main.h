@@ -1,5 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
+#define 0-OBJECT_LIKE_MACRO_H
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
