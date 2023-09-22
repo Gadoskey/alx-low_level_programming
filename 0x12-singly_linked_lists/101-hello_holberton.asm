@@ -6,7 +6,6 @@ section .text
 main:
     push rbp
     mov rdi, format
-    xor rax, rax
     call printf
     pop rbp
     ret
