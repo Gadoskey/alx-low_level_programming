@@ -1,5 +1,5 @@
 section .data
-    format db "Hello, Holberton",10
+    format db "Hello, Holberton", 10
 section .text
     global main
     extern printf
