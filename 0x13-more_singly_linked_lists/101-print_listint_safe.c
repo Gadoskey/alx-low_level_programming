@@ -7,26 +7,27 @@
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	const listint_t *slow = head, *fast = head;
+	const listint_t *current = head;
 	size_t count = 0;
+	unsigned long int addresses[1024];
 
-	while (slow && fast && fast->next)
+	while (current != NULL)
 	{
-		slow = slow->next;
-		fast = fast->next->next;
+		size_t i;
 
-		if (slow == fast)
+		for (i = 0; i < count; i++)
 		{
-			printf("-> [%p] %d\n", (void *)fast, fast->n);
-			exit (98);
+			if (addresses[i] == (unsigned long int)current)
+			{
+				printf("[%p] %d\n", (void *)current, current->n);
+				return (count);
+			}
 		}
-	}
-	slow = head;
-	while (slow)
-	{
-		printf("[%p] %d\n", (void *)slow, slow->n);
-		slow = slow->next;
+		addresses[count] = (unsigned long int)current;
 		count++;
+
+		printf("[%p] %d\n", (void *)current, current->n);
+		current = current->next;
 	}
 	return (count);
 }
