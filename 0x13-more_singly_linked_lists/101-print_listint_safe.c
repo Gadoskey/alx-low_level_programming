@@ -19,8 +19,8 @@ size_t print_listint_safe(const listint_t *head)
 		{
 			if (addresses[i] == (unsigned long int)current)
 			{
-				printf("[%p] %d\n", (void *)current, current->n);
-				return (count);
+				printf("-> [%p] %d\n", (void *)current, current->n);
+				exit(98);
 			}
 		}
 		addresses[count] = (unsigned long int)current;
