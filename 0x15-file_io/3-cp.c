@@ -31,9 +31,10 @@ void print_error(int err, char *file)
 	}
 }
 /**
- * my_cp - copy contents from one file to another
+ * my_cp- copy contents from one file to another
  * @file_from: the file from
  * @file_to: the file to
+ * Return: 0
  */
 int my_cp(char *file_from, char *file_to)
 {
