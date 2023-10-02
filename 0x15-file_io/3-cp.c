@@ -48,14 +48,14 @@ int main(int argc, char *argv[])
 		{
 			close(fd_from);
 			close(fd_to);
-			exit_with_message(99, "Error:Can't write to file NAME_OF_THE_FILE");
+			exit_with_message(99, "Error: Can't write to file NAME_OF_THE_FILE");
 		}
 	}
 	if (bytes_read == -1)
 	{
 		close(fd_from);
 		close(fd_to);
-		exit_with_message(98, "Error:Can't read from file NAME_OF_THE_FILE");
+		exit_with_message(98, "Error: Can't read from file NAME_OF_THE_FILE");
 	}
 	return (0);
 }
