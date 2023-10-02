@@ -1,6 +1,8 @@
-#ifndef LISTS_H
-#define LISTS_H
+#ifndef MAIN_H
+#define MAIN_H
 #include <stdio.h>
+#include <fcntl.h>
+#include <sys/stat.h>
 #include <stddef.h>
 #include <unistd.h>
 #include <stdlib.h>
