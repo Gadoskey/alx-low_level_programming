@@ -1,8 +1,3 @@
-/*
- * File: 1-dlistint_len.c
- * Auth: Gedeon Obae Gekonge
- */
-
 #include "lists.h"
 
 /**
@@ -13,13 +8,13 @@
  */
 size_t dlistint_len(const dlistint_t *h)
 {
-	size_t nodes = 0;
+	size_t counts = 0;
 
-	while (h)
+	while (h != NULL)
 	{
-		nodes++;
 		h = h->next;
+		counts++;
 	}
 
-	return (nodes);
+	return (counts);
 }
