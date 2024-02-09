@@ -1,14 +1,8 @@
-/*
- * File: 1-djb2.c
- * Auth: Gedeon Obae Gekonge
- */
-
+/* Author -- Gadoskey */
 #include "hash_tables.h"
-
 /**
  * hash_djb2 - Hash function implementing the djb2 algorithm.
- * @str: The string to hash.
- *
+ * @str: The string passed to hash.
  * Return: The calculated hash.
  */
 unsigned long int hash_djb2(const unsigned char *str)
