@@ -1,8 +1,8 @@
 /* Author -- Gadoskey */
 #include "hash_tables.h"
 /**
- * key_index - Get the index at which a key/value pair should be stored in array of a hash table.
- * @key: The key to get the index of.
+ * key_index - Get the index at which a key/value pair should be stored.
+ * @key: The key to get its index.
  * @size: The size of the array of the hash table.
  * Return: The index of the key
  */
