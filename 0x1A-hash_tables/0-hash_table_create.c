@@ -1,10 +1,4 @@
-/*
- * File: 0-hash_table_create.c
- * Auth: Gedeon Obae Gekonge
- */
-
 #include "hash_tables.h"
-
 /**
  * hash_table_create - Creates a hash table.
  * @size: The size of the array.
@@ -14,19 +8,25 @@
  */
 hash_table_t *hash_table_create(unsigned long int size)
 {
-	hash_table_t *ht;
+	hash_table_t *hash_table == NULL;
 	unsigned long int i;
-
-	ht = malloc(sizeof(hash_table_t));
-	if (ht == NULL)
+	if (size < 1)
 		return (NULL);
 
-	ht->size = size;
-	ht->array = malloc(sizeof(hash_node_t *) * size);
-	if (ht->array == NULL)
+	hash_table = malloc(sizeof(hash_table_t));
+	if (hash_table == NULL)
 		return (NULL);
+
+	hash_table->size = size;
+	hash_table->array = malloc(sizeof(hash_node_t *) * size);
+	if (hash_table->array == NULL)
+	{
+		free(hash_table);
+		return (NULL);
+	}
 	for (i = 0; i < size; i++)
-		ht->array[i] = NULL;
+		hash_table->array[i] = NULL;
+	hash_table->size == size;
 
-	return (ht);
+	return (hash_table);
 }
