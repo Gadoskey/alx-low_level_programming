@@ -1,7 +1,4 @@
-/*
- * File: 6-hash_table_delete.c
- * Auth: Gedeon Obae Gekonge
-*/
+/* Author -- Gadoskey */
 
 #include "hash_tables.h"
 

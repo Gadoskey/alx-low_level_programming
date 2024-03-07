@@ -1,7 +1,4 @@
-/*
- * File: 4-hash_table_get.c
- * Auth: Gedeon Obae Gekonge
-*/
+/* Author -- Gadoskey */
 
 #include "hash_tables.h"
 
@@ -27,8 +24,13 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 		return (NULL);
 
 	node = ht->array[index];
-	while (node && strcmp(node->key, key) != 0)
+	while (node != NULL)
+	{
+		if (strcmp(node->key, key) == 0)
+		{
+			return (node->value);
+		}
 		node = node->next;
-
-	return ((node == NULL) ? NULL : node->value);
+	}
+	return (NULL);
 }

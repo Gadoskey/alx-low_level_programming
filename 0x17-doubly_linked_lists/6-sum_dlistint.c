@@ -1,10 +1,4 @@
-/*
- * File: 6-sum_dlistint.c
- * Auth: Gedeon Obae Gekonge
- */
-
 #include "lists.h"
-
 /**
  * sum_dlistint - Sums all the data of a dlistint_t list.
  * @head: The head of the dlistint_t list.
@@ -13,13 +7,13 @@
  */
 int sum_dlistint(dlistint_t *head)
 {
-	int sum = 0;
+	int total = 0;
 
-	while (head)
+	while (head != NULL)
 	{
-		sum += head->n;
+		total += head->n;
 		head = head->next;
 	}
 
-	return (sum);
+	return (total);
 }

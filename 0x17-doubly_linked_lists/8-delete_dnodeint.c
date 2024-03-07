@@ -1,8 +1,3 @@
-/*
- * File: 8-delete_dnodeint.c
- * Auth: Gedeon Obae Gekonge
- */
-
 #include "lists.h"
 
 /**

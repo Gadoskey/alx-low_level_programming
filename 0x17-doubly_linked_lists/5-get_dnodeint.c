@@ -1,10 +1,4 @@
-/*
- * File: 5-get_dnodeint.c
- * Auth: Gedeon Obae Gekonge
- */
-
 #include "lists.h"
-
 /**
  * get_dnodeint_at_index - Locates a node in a dlistint_t list.
  * @head: The head of the dlistint_t list.
@@ -15,12 +9,18 @@
  */
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
-	for (; index != 0; index--)
+	unsigned int count = 0;
+	dlistint_t *current = head;
+
+	while (current != NULL)
 	{
-		if (head == NULL)
-			return (NULL);
-		head = head->next;
+		if (count == index)
+		{
+			return (current);
+		}
+		count++;
+		current = current->next;
 	}
 
-	return (head);
+	return (NULL);
 }
